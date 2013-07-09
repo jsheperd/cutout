@@ -1,3 +1,4 @@
+
 #ifndef __IDEVICE
 #define __IDEVICE
 
@@ -5,12 +6,12 @@
 
 class IDevice {
 public:
-    enum sides {
-      LEFT,
-      RIGHT    
-    };
+  enum sides {
+    FRONT,
+    BACK    
+  };
 
-    virtual void step(sides side, IHead::orientations orientation, IMotor::directions direction) = 0;
+    virtual void step(sides side, IHead::directions direction) = 0;
 };
 
 #endif
